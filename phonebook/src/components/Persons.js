@@ -7,7 +7,7 @@ let filteredPersons = props.persons.filter((person) => {return(person.name.toLow
 return (
     <ul>
         {filteredPersons.map((person) => {
-            return(<Person person={person} key={person.id} />)
+            return(<Person deleteHandler={props.deleteHandler} person={person} key={person.id} />)
         })}
     </ul>
 )
